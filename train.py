@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import confusion_matrix,precision_score,f1_score,recall_score
 sns.set(style='white')
-dataset =pd.read_csv(r'C:\Users\kharw\Downloads\code-2 (1)\iris.csv')
+dataset =pd.read_csv('iris.csv')
 dataset.columns = [colname.strip(' (cm)').replace(" ", "_") for colname in dataset.columns.tolist()]
 features_names = dataset.columns.tolist()[:4]
 dataset['sepal_length_width_ratio'] = dataset['sepal_length'] / dataset['sepal_width']
